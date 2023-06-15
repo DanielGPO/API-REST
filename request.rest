@@ -1,0 +1,57 @@
+POST http://localhost:5000/api/services
+Content-Type: application/json
+
+{
+    "name": "Algum serviço 2",
+    "description": "Alguma descrição",
+    "price": 1900,
+    "image": "https://img.freepik.com/free-vector/silhouette-party-audience_1048-9714.jpg?w=2000"
+}
+###
+
+GET http://localhost:5000/api/services
+
+###
+
+GET http://localhost:5000/api/services/6489fd59b91a8a8a32dd42a0
+###
+
+DELETE  http://localhost:5000/api/services/648a0083d76320de058adb3d
+###
+
+
+PUT http://localhost:5000/api/services/6489fd59b91a8a8a32dd42a0
+Content-Type: application/json
+
+{
+    "name": "Algum serviço 3",
+    "description": "No descriptions Allowed",
+    "price": 1000,
+    "image": "https://img.freepik.com/free-vector/silhouette-party-audience_1048-9714.jpg?w=2000"
+}
+###
+
+POST http://localhost:5000/api/parties
+Content-Type: application/json
+
+{
+    "title": "Meu evento",
+    "author": "Daniel",
+    "description": "uma festa de aniversário",
+    "budget": 9000,
+    "image": "https://img.freepik.com/free-vector/silhouette-party-audience_1048-9714.jpg?w=2000",
+    "services": [
+            {
+        "name": "Algum serviço 2",
+        "description": "Alguma descrição",
+        "price": 1900,
+        "image": "https://img.freepik.com/free-vector/silhouette-party-audience_1048-9714.jpg?w=2000"
+            },
+            {
+        "name": "Algum serviço ",
+        "description": "Alguma descrição 2",
+        "price": 2000,
+        "image": "https://img.freepik.com/free-vector/silhouette-party-audience_1048-9714.jpg?w=2000"
+            }
+    ]
+}
